@@ -12,10 +12,8 @@ var LinkButton = React.createClass({
                 You <b>{text}</b> Me!!
             </p>
         )
-
     }
 });
-
 ReactDOM.render(
     <LinkButton />,
     document.getElementById('example')
