@@ -34,8 +34,8 @@ var WebSite = React.createClass({
     render: function () {
         return (
             <div>
-                <Name name="this.props.name"></Name>
-                <Link site="this.props.site"/>
+                <Name name={this.props.name}></Name>
+                <Link site={this.props.site}/>
             </div>
         );
     }
@@ -52,12 +52,12 @@ var Name = React.createClass({
 var Link = React.createClass({
     render: function () {
         return (
-            <a href="this.props.site">{this.props.site}</a>
+            <a href={this.props.site}>{this.props.site}</a>
         );
     }
 });
 
 ReactDOM.render(
-    <WebSite name="百度" site="http://www.baidu.com" />,
+    <WebSite name="百度" site="http://www.baidu.com"/>,
     document.getElementById("example")
 )
