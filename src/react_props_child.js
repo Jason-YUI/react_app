@@ -4,7 +4,7 @@ var NodeList = React.createClass({
             <ol>
                 {
                     React.Children.map(this.props.children, function (child) {
-                       return <li>{child}</li>
+                        return <li>{child}</li>
                     })
                 }
             </ol>
