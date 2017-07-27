@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content {
+            width: 75px;
+            height: 75px;
+            border: 1px solid #999;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .content img {
+            margin: 0 auto;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img id="imgSrc" src='../image/1.jpg'>
+    </div>
+<script>
+    var Img = document.getElementById('imgSrc');
+    function AutoSize(Img, maxWidth, maxHeight) {
+        var image = new Image();
+        //原图片原始地址（用于获取原图片的真实宽高，当<img>标签指定了宽、高时不受影响）
+        image.src = Img.src;
+        // 当图片比图片框小时不做任何改变
+        if (image.width < maxWidth && image.height < maxHeight) {
+            console.log(1)
+            Img.width = image.width;
+            Img.height = image.height;
+        }
+        //原图片宽高比例 大于 图片框宽高比例,则以框的宽为标准缩放，反之以框的高为标准缩放
+        else {
+            console.log(2)
+            if (maxWidth / maxHeight <= image.width / image.height) //原图片宽高比例 大于 图片框宽高比例
+            {
+                Img.width = maxWidth;   //以框的宽度为标准
+                Img.height = maxWidth * (image.height / image.width);
+            }
+            else {   //原图片宽高比例 小于 图片框宽高比例
+                Img.width = maxHeight * (image.width / image.height);
+                Img.height = maxHeight;   //以框的高度为标准
+            }
+        }
+    }
+
+    AutoSize(Img, 75, 75)
+</script>
+</body>
+</html>
