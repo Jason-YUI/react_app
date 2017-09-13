@@ -233,8 +233,10 @@ You would need to install an ESLint plugin for your editor first. Then, add a fi
   "extends": "react-app"
 
 
-  
+
 }
+
+
 ```
 
 Now your editor should report the linting warnings.
