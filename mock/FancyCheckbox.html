@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://fb.me/react-0.14.7.js"></script>
+    <script src="https://fb.me/react-dom-0.14.7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+    <!--<div id="example"></div>-->
+    <div id="main"></div>
+<script type="text/babel">
+//    function FancyCheckbox(props) {
+//        var { checked, ...other } = props;
+//        var fancyClass = props.checked ? 'FancyChecked' : 'FancyunChecked';
+//        return (
+//            <div { ...other } className={ fancyClass } onClick={ props.onClick }>
+//                { props.children }
+//            </div>
+//        );
+
+//        var { checked, title, ...other } = props;
+//        console.log(props)
+//        var fancyClass = props.checked ? 'FancyChecked' : 'FancyunChecked';
+//        var fancyTitle = checked ? ' X ' + title : ' 0 ' + title;
+//
+//        return (
+//            <label>
+//                <input { ...other }
+//                       checked={ checked }
+//                       className={ fancyClass }
+//                       type="checkbox"
+//                />
+//                { fancyTitle }
+//            </label>
+//        );
+//    }
+
+//    ReactDOM.render(
+//            <FancyCheckbox checked={ true } title="123" name="name" data="data" onClick={ console.log.bind(console) }>
+//                Hello world
+//            </FancyCheckbox>,
+//        document.getElementById('example')
+//    );
+    var FancyForm = React.createClass({
+        getInitialState: function () {
+            return { value: 'hello' }
+        },
+        
+        handleChange: function (event) {
+            console.log(event)
+            this.setState({ value: event.target.value })
+            console.log(this.state.value)
+        },
+
+        render: function () {
+            var value = this.state.value;
+
+            return (
+                <input type="text" value= { value } onChange={ this.handleChange }/>
+            );
+        }
+    });
+
+    ReactDOM.render(
+        <FancyForm></FancyForm>,
+        document.getElementById('main')
+    )
+</script>
+</body>
+</html>
