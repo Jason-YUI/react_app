@@ -21,7 +21,7 @@ function Comment(props) {
 function UserInfo(props) {
     return (
         <div className="UserInfo">
-            <img src={ props.user.avatarUrl }/>
+            <img src={ props.user.avatarUrl } alt=""/>
             <div className="userInfo-name">
                 { props.user.name}
             </div>
