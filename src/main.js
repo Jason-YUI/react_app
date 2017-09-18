@@ -3,6 +3,7 @@ import './App.css';
 import App from "./welcome";
 import Comment from './Comment';
 import Clock from './Clock';
+import Toggle from './Toggle';
 
 class CommentBox extends Component {
     render() {
@@ -15,6 +16,7 @@ class CommentBox extends Component {
                          author={ comment.author }>
                 </Comment>
                 <Clock/>
+                <Toggle/>
             </div>
         );
     }
