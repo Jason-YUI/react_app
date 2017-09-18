@@ -3,7 +3,9 @@ import './App.css';
 import App from "./welcome";
 import Comment from './Comment';
 import Clock from './Clock';
-import Toggle from './Toggle';
+import Toggle from './Toggle'
+import LoginControl from './LoginControl';
+import Mailbox from './Mailbox';
 
 class CommentBox extends Component {
     render() {
@@ -17,6 +19,8 @@ class CommentBox extends Component {
                 </Comment>
                 <Clock/>
                 <Toggle/>
+                <LoginControl/>
+                <Mailbox unreadMessages={ messages }/>
             </div>
         );
     }
@@ -30,5 +34,7 @@ const comment = {
         avatarUrl: 'http://placekitten.com/g/64/64'
     }
 };
+
+const messages = ['React', 'facebook'];
 
 export default CommentBox;
