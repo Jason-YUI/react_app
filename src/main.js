@@ -7,6 +7,7 @@ import Toggle from './Toggle'
 import LoginControl from './LoginControl';
 import Mailbox from './Mailbox';
 import WarningPage from './WarningPage';
+import NumberList from './NumberList';
 
 class CommentBox extends Component {
     render() {
@@ -23,6 +24,7 @@ class CommentBox extends Component {
                 <LoginControl/>
                 <Mailbox unreadMessages={ messages }/>
                 <WarningPage/>
+                <NumberList numbers={ numbers }/>
             </div>
         );
     }
@@ -38,5 +40,7 @@ const comment = {
 };
 
 const messages = ['React', 'facebook'];
+
+const numbers = [1, 2, 3, 4, 5];
 
 export default CommentBox;
