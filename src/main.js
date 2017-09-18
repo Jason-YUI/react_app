@@ -6,6 +6,7 @@ import Clock from './Clock';
 import Toggle from './Toggle'
 import LoginControl from './LoginControl';
 import Mailbox from './Mailbox';
+import WarningPage from './WarningPage';
 
 class CommentBox extends Component {
     render() {
@@ -21,6 +22,7 @@ class CommentBox extends Component {
                 <Toggle/>
                 <LoginControl/>
                 <Mailbox unreadMessages={ messages }/>
+                <WarningPage/>
             </div>
         );
     }
