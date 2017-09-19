@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 
-class NumberList extends Component {
+function ListItem(props) {
+    // Correct! There is no need to specify the key here:
+    return <li>{props.value}</li>;
+}
 
-    render() {
-        const numbers = this.props.numbers;
-
-        const listItems = numbers.map(num =>
-            <li key={ num.toString() }>{ num }</li>
-        )
-
-        return (
-            <ul>{ listItems }</ul>
-        )
-    }
+function NumberList(props) {
+    const numbers = props.numbers;
+    const listItems = numbers.map((number) =>
+        // Correct! Key should be specified inside the array.
+        <ListItem key={number.toString()}
+                  value={number} />
+    );
+    return (
+        <ul>
+            {listItems}
+        </ul>
+    );
 }
 
 export default NumberList;

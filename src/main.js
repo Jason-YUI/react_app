@@ -8,6 +8,8 @@ import LoginControl from './LoginControl';
 import Mailbox from './Mailbox';
 import WarningPage from './WarningPage';
 import NumberList from './NumberList';
+import Blog from './Blog';
+import NameForm from './NameForm';
 
 class CommentBox extends Component {
     render() {
@@ -25,6 +27,8 @@ class CommentBox extends Component {
                 <Mailbox unreadMessages={ messages }/>
                 <WarningPage/>
                 <NumberList numbers={ numbers }/>
+                <Blog post={ post }/>
+                <NameForm/>
             </div>
         );
     }
@@ -42,5 +46,10 @@ const comment = {
 const messages = ['React', 'facebook'];
 
 const numbers = [1, 2, 3, 4, 5];
+
+const post = [
+    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
 
 export default CommentBox;
