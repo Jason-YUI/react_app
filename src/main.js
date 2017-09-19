@@ -12,6 +12,7 @@ import Blog from './Blog';
 import NameForm from './NameForm';
 import FlavorForm from './FlavorForm';
 import Reservation from './Reservation';
+import Calculator from './Calculator';
 
 class CommentBox extends Component {
     render() {
@@ -33,6 +34,7 @@ class CommentBox extends Component {
                 <NameForm/>
                 <FlavorForm/>
                 <Reservation/>
+                <Calculator/>
             </div>
         );
     }
