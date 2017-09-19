@@ -10,6 +10,8 @@ import WarningPage from './WarningPage';
 import NumberList from './NumberList';
 import Blog from './Blog';
 import NameForm from './NameForm';
+import FlavorForm from './FlavorForm';
+import Reservation from './Reservation';
 
 class CommentBox extends Component {
     render() {
@@ -29,6 +31,8 @@ class CommentBox extends Component {
                 <NumberList numbers={ numbers }/>
                 <Blog post={ post }/>
                 <NameForm/>
+                <FlavorForm/>
+                <Reservation/>
             </div>
         );
     }

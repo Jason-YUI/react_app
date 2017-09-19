@@ -25,7 +25,6 @@ class NameForm extends Component {
                     Name:
                     <input type="text" value={ this.state.value } onChange={ this.handleChange }/>
                 </label>
-                <br/>
                 <input type="submit" value='submit'/>
             </form>
         );
