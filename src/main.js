@@ -13,6 +13,7 @@ import NameForm from './NameForm';
 import FlavorForm from './FlavorForm';
 import Reservation from './Reservation';
 import Calculator from './Calculator';
+import LikeButton from './LikeButton';
 
 class CommentBox extends Component {
     render() {
@@ -35,6 +36,7 @@ class CommentBox extends Component {
                 <FlavorForm/>
                 <Reservation/>
                 <Calculator/>
+                <LikeButton wordings={{likedText: '已赞', unlikedText: '赞'}}/>
             </div>
         );
     }
