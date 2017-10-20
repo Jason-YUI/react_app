@@ -1,10 +1,6 @@
 import React from 'react';
 
 class Screen extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     static defaultProps = {
         showContent: '无内容'
     };

@@ -10,7 +10,7 @@ class Computer extends React.Component {
     handleTagger() {
         let sta, content;
 
-        if (this.state.status == 'on') {
+        if (this.state.status === 'on') {
             sta = 'off';
             content = '显示器关了';
         } else {

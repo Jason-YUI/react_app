@@ -15,7 +15,7 @@ import Reservation from './Reservation';
 import Calculator from './Calculator';
 import LikeButton from './LikeButton';
 import Computer from './Computer';
-import Screen from './Screen';
+import ListMap from './list_map';
 
 class CommentBox extends Component {
     render() {
@@ -32,15 +32,16 @@ class CommentBox extends Component {
                 <LoginControl/>
                 <Mailbox unreadMessages={ messages }/>
                 <WarningPage/>
-                {/*<NumberList numbers={ numbers }/>*/}
-                {/*<Blog post={ post }/>*/}
-                {/*<NameForm/>*/}
-                {/*<FlavorForm/>*/}
-                {/*<Reservation/>*/}
-                {/*<Calculator/>*/}
+                <NumberList numbers={ numbers }/>
+                <Blog post={ post }/>
+                <NameForm/>
+                <FlavorForm/>
+                <Reservation/>
+                <Calculator/>
                 <LikeButton wordings={{likedText: '已赞', unlikedText: '赞'}}/>
                 <br/>
                 <Computer/>
+                <ListMap/>
             </div>
         );
     }

@@ -23,7 +23,6 @@ class LikeButton extends React.Component {
                 { this.state.isLike ? wordings.likedText : wordings.unlikedText }👍
             </button>
         );
-        this.el.addEndEventListener('click', this.changeLikeText.bind(this), false);
     }
 }
 
