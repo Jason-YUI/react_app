@@ -17,6 +17,7 @@ import LikeButton from './LikeButton';
 import Computer from './Computer';
 import ListMap from './list_map';
 import Post from "./Post";
+import Card from "./Card";
 
 class CommentBox extends Component {
     render() {
@@ -44,6 +45,11 @@ class CommentBox extends Component {
                 <Computer/>
                 <ListMap/>
                 <Post content={123}/>
+                <Card>
+                  <h2>React.js 小书</h2>
+                  <p>开源、免费、专业、简单</p>
+                  订阅： <input/>
+                </Card>
             </div>
         );
     }
