@@ -16,6 +16,7 @@ import Calculator from './Calculator';
 import LikeButton from './LikeButton';
 import Computer from './Computer';
 import ListMap from './list_map';
+import Post from "./Post";
 
 class CommentBox extends Component {
     render() {
@@ -42,6 +43,7 @@ class CommentBox extends Component {
                 <br/>
                 <Computer/>
                 <ListMap/>
+                <Post content={123}/>
             </div>
         );
     }
