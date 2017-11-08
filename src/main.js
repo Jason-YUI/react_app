@@ -23,33 +23,33 @@ class CommentBox extends Component {
     render() {
         return (
             <div className="commentBox">
-                <h1>Comments</h1>
-                <App name="Sara"/>
-                <Comment date={ comment.date }
-                         text={ comment.text }
-                         author={ comment.author }>
-                </Comment>
-                <Clock/>
-                <Toggle/>
-                <LoginControl/>
-                <Mailbox unreadMessages={ messages }/>
-                <WarningPage/>
-                <NumberList numbers={ numbers }/>
-                <Blog post={ post }/>
-                <NameForm/>
-                <FlavorForm/>
-                <Reservation/>
-                <Calculator/>
-                <LikeButton wordings={{likedText: '已赞', unlikedText: '赞'}}/>
-                <br/>
-                <Computer/>
-                <ListMap/>
-                <Post content={123}/>
-                <Card>
-                  <h2>React.js 小书</h2>
-                  <p>开源、免费、专业、简单</p>
-                  订阅： <input/>
-                </Card>
+                {/*<h1>Comments</h1>*/}
+                {/*<App name="Sara"/>*/}
+                {/*<Comment date={ comment.date }*/}
+                         {/*text={ comment.text }*/}
+                         {/*author={ comment.author }>*/}
+                {/*</Comment>*/}
+                {/*<Clock/>*/}
+                {/*<Toggle/>*/}
+                {/*<LoginControl/>*/}
+                {/*<Mailbox unreadMessages={ messages }/>*/}
+                {/*<WarningPage/>*/}
+                {/*<NumberList numbers={ numbers }/>*/}
+                {/*<Blog post={ post }/>*/}
+                {/*<NameForm/>*/}
+                {/*<FlavorForm/>*/}
+                {/*<Reservation/>*/}
+                {/*<Calculator/>*/}
+                {/*<LikeButton wordings={{likedText: '已赞', unlikedText: '赞'}}/>*/}
+                {/*<br/>*/}
+                {/*<Computer/>*/}
+                {/*<ListMap/>*/}
+                {/*<Post content={123}/>*/}
+                {/*<Card>*/}
+                  {/*<h2>React.js 小书</h2>*/}
+                  {/*<p>开源、免费、专业、简单</p>*/}
+                  {/*订阅： <input/>*/}
+                {/*</Card>*/}
             </div>
         );
     }
