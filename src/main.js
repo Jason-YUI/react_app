@@ -3,7 +3,6 @@ import './App.css';
 import Comment from './Comment';
 import Clock from './Clock';
 import Toggle from './Toggle'
-import LoginControl from './LoginControl';
 import Mailbox from './Mailbox';
 import WarningPage from './WarningPage';
 import NumberList from './NumberList';
@@ -18,12 +17,12 @@ import ListMap from './list_map';
 import Post from "./Post";
 import Card from "./Card";
 import ActionLink from "./ActionLink";
+import LoginControl from './LoginControl';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './containers/App';
 import todoApp from './reducer/reducer';
-import Greeting from './Greeting';
 
 let store = createStore(todoApp);
 
@@ -40,7 +39,6 @@ class CommentBox extends Component {
         author={ comment.author }>
         </Comment>
         <Toggle/>
-        <LoginControl/>
         <Mailbox unreadMessages={ messages }/>
         <WarningPage/>
         <NumberList numbers={ numbers }/>
@@ -61,7 +59,7 @@ class CommentBox extends Component {
         </Card>
         <Clock/>
         <ActionLink/>
-        <Greeting isLoggedIn={false}/>
+        <LoginControl/>
       </div>
     );
   }
