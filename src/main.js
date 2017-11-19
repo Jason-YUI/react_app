@@ -17,11 +17,13 @@ import Computer from './Computer';
 import ListMap from './list_map';
 import Post from "./Post";
 import Card from "./Card";
+import ActionLink from "./ActionLink";
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './containers/App';
 import todoApp from './reducer/reducer';
+import Greeting from './Greeting';
 
 let store = createStore(todoApp);
 
@@ -58,6 +60,8 @@ class CommentBox extends Component {
         订阅： <input/>
         </Card>
         <Clock/>
+        <ActionLink/>
+        <Greeting isLoggedIn={false}/>
       </div>
     );
   }
