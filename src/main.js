@@ -5,7 +5,6 @@ import Clock from './Clock';
 import Toggle from './Toggle'
 import Mailbox from './Mailbox';
 import WarningPage from './WarningPage';
-import NumberList from './NumberList';
 import Blog from './Blog';
 import NameForm from './NameForm';
 import FlavorForm from './FlavorForm';
@@ -18,11 +17,13 @@ import Post from "./Post";
 import Card from "./Card";
 import ActionLink from "./ActionLink";
 import LoginControl from './LoginControl';
+import WelcomeDialog from './WelcomeDialog';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './containers/App';
 import todoApp from './reducer/reducer';
+import Page from './Page';
 
 let store = createStore(todoApp);
 
@@ -41,7 +42,6 @@ class CommentBox extends Component {
         <Toggle/>
         <Mailbox unreadMessages={ messages }/>
         <WarningPage/>
-        <NumberList numbers={ numbers }/>
         <Blog post={ post }/>
         <NameForm/>
         <FlavorForm/>
@@ -60,6 +60,8 @@ class CommentBox extends Component {
         <Clock/>
         <ActionLink/>
         <LoginControl/>
+        <Page/>
+        <WelcomeDialog/>
       </div>
     );
   }
