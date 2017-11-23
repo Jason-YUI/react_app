@@ -3,7 +3,7 @@ import React from 'react';
 class FlavorForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { value: 'grapefruit' }
+        this.state = { value: 'grapefruit' };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);

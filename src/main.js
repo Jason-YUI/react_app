@@ -19,6 +19,7 @@ import ActionLink from "./ActionLink";
 import LoginControl from './LoginControl';
 import WelcomeDialog from './WelcomeDialog';
 import FilterableProductTable from './FilterableProductTable';
+import MessageList from './MessageList';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -26,8 +27,26 @@ import App from './containers/App';
 import todoApp from './reducer/reducer';
 import Page from './Page';
 import Greeting from "./Greeting";
+import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from "./action/actions";
 
 let store = createStore(todoApp);
+//打印初始状态
+console.log('1', store.getState());
+
+//每次 state 更新时，打印日志
+//注意 subscribe() 返回一个函数用来注销监听器
+let unsubscribe = store.subscribe(() =>
+  console.log('2', store.getState())
+);
+
+store.dispatch(addTodo('Learn about action'));
+store.dispatch(addTodo('Learn about reducers'));
+store.dispatch(addTodo('Learn about store'));
+store.dispatch(completeTodo(0));
+store.dispatch(completeTodo(1));
+store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
+
+unsubscribe();
 
 class CommentBox extends Component {
   render() {
@@ -64,8 +83,9 @@ class CommentBox extends Component {
         {/*<LoginControl/>*/}
         {/*<Page/>*/}
         {/*<WelcomeDialog/>*/}
-        <FilterableProductTable products={PRODUCTS} message={0}/>
-        <Greeting/>
+        {/*<FilterableProductTable products={PRODUCTS} message={0}/>*/}
+        {/*<Greeting/>*/}
+        {/*<MessageList message={messages}/>*/}
       </div>
     );
   }

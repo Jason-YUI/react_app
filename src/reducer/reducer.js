@@ -10,7 +10,6 @@ function visibilityFilter(state = SHOW_ALL, action) {
       return state
   }
 }
-
 function todos(state = [], action) {
   switch (action.type) {
     case ADD_TODO:
@@ -33,7 +32,6 @@ function todos(state = [], action) {
       return state;
   }
 }
-
 const todoApp = combineReducers({
   visibilityFilter,
   todos
