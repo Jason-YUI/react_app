@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 
 class App extends Component {
   render() {
+    console.log(this.props)
     const { dispatch, visibleTodos, VisibilityFilter } = this.props;
     return (
       <div>
@@ -30,18 +31,6 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  visibleTodos: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired
-  }).isRequired).isRequired,
-  VisibilityFilter: PropTypes.oneOf([
-    'SHOW_ALL',
-    'SHOW_COMPLETED',
-    'SHOW_ACTIVE'
-  ]).isRequired
-};
-
 function selectTodos(todos, filter) {
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
@@ -60,5 +49,17 @@ function select(state) {
     VisibilityFilter: state.visibilityFilter
   }
 }
+
+App.propTypes = {
+  visibleTodos: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired
+  }).isRequired).isRequired,
+  VisibilityFilter: PropTypes.oneOf([
+    'SHOW_ALL',
+    'SHOW_COMPLETED',
+    'SHOW_ACTIVE'
+  ]).isRequired
+};
 
 export default connect(select)(App);

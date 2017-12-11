@@ -24,37 +24,48 @@ import MessageList from './MessageList';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './containers/App';
+import Counter from './containers/Counter';
+import counter from './reducer/countReducer';
 import todoApp from './reducer/reducer';
 import Page from './Page';
 import Greeting from "./Greeting";
 import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from "./action/actions";
 
-let store = createStore(todoApp);
+let store2 = createStore(todoApp);
 //打印初始状态
-console.log('1', store.getState());
+// console.log('1', store.getState());
 
 //每次 state 更新时，打印日志
 //注意 subscribe() 返回一个函数用来注销监听器
-let unsubscribe = store.subscribe(() =>
-  console.log('2', store.getState())
-);
+// let unsubscribe = store.subscribe(() =>
+//   console.log('2', store.getState())
+// );
 
-store.dispatch(addTodo('Learn about action'));
-store.dispatch(addTodo('Learn about reducers'));
-store.dispatch(addTodo('Learn about store'));
-store.dispatch(completeTodo(0));
-store.dispatch(completeTodo(1));
-store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
+// store.dispatch(addTodo('Learn about action'));
+// store.dispatch(addTodo('Learn about reducers'));
+// store.dispatch(addTodo('Learn about store'));
+// store.dispatch(completeTodo(0));
+// store.dispatch(completeTodo(1));
+// store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
 
-unsubscribe();
+// unsubscribe();
+
+//计数器
+
+const store1 = createStore(counter);
 
 class CommentBox extends Component {
   render() {
     return (
       <div className="commentBox">
-        {/*<Provider store={store}>*/}
-          {/*<App />*/}
-        {/*</Provider>*/}
+        <Counter
+          value={store1.getState()}
+          onIncrement={() => store1.dispatch({ type: 'INCREMENT'})}
+          onDecrement={() => store1.dispatch({ type: 'DECREMENT'})}
+        />
+        <Provider store={store2}>
+          <App />
+        </Provider>
         {/*<h1>Comments</h1>*/}
         {/*<Comment date={ comment.date }*/}
         {/*text={ comment.text }*/}
