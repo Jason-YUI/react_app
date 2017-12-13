@@ -21,9 +21,12 @@
     "eslint": "^4.12.1",
     "flow-bin": "^0.59.0",
     "iscroll": "^5.2.0",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
     "styled-components": "^2.2.4"
   }
 }

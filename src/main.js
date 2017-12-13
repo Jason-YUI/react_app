@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import Comment from './Comment';
-import Clock from './Clock';
-import Toggle from './Toggle'
-import Mailbox from './Mailbox';
-import WarningPage from './WarningPage';
-import Blog from './Blog';
-import NameForm from './NameForm';
-import FlavorForm from './FlavorForm';
-import Reservation from './Reservation';
-import Calculator from './Calculator';
-import LikeButton from './LikeButton';
-import Computer from './Computer';
-import ListMap from './list_map';
-import Post from "./Post";
-import Card from "./Card";
-import ActionLink from "./ActionLink";
-import LoginControl from './LoginControl';
-import WelcomeDialog from './WelcomeDialog';
-import FilterableProductTable from './FilterableProductTable';
-import MessageList from './MessageList';
+// import Comment from './Comment';
+// import Clock from './Clock';
+// import Toggle from './Toggle'
+// import Mailbox from './Mailbox';
+// import WarningPage from './WarningPage';
+// import Blog from './Blog';
+// import NameForm from './NameForm';
+// import FlavorForm from './FlavorForm';
+// import Reservation from './Reservation';
+// import Calculator from './Calculator';
+// import LikeButton from './LikeButton';
+// import Computer from './Computer';
+// import ListMap from './list_map';
+// import Post from "./Post";
+// import Card from "./Card";
+// import ActionLink from "./ActionLink";
+// import LoginControl from './LoginControl';
+// import WelcomeDialog from './WelcomeDialog';
+// import FilterableProductTable from './FilterableProductTable';
+// import MessageList from './MessageList';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -27,8 +27,8 @@ import App from './containers/App';
 import Counter from './containers/Counter';
 import counter from './reducer/countReducer';
 import todoApp from './reducer/reducer';
-import Page from './Page';
-import Greeting from "./Greeting";
+// import Page from './Page';
+// import Greeting from "./Greeting";
 import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from "./action/actions";
 
 let store2 = createStore(todoApp);

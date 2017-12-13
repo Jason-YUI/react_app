@@ -2,18 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-class Counter  extends React.Component {
+class Counter extends React.Component {
   constructor(props) {
+    console.log(props)
     super(props);
   }
 
-  incrementIfOdd = () => {
+  incrementIfOdd() {
     if (this.props.value % 2 !== 0) {
       this.props.onIncrement();
     }
   };
 
-  incrementAsync = () => {
+  incrementAsync() {
     setTimeout(this.props.onIncrement, 1000);
   };
 
@@ -31,11 +32,11 @@ class Counter  extends React.Component {
            -
          </button>
          {' '}
-         <button onClick={this.props.incrementIfOdd}>
+         <button onClick={this.incrementIfOdd}>
            Increment if odd
          </button>
          {' '}
-         <button onClick={this.props.incrementAsync}>
+         <button onClick={this.incrementAsync}>
            Increment async
          </button>
        </div>
